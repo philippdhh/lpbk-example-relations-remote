@@ -1,0 +1,27 @@
+{
+  "name": "book",
+  "plural": "books",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "pages": {
+      "type": "hasMany",
+      "model": "page",
+      "foreignKey": "bookId"
+    }},
+    "acls": [],
+  "methods": []
+}
